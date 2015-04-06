@@ -18,7 +18,7 @@ public class NoLista implements Comparable<Object> {
         info = novaInfo;
         prox = proximo;
     }
-
+    
     public NoLista getProx(){
         return this.prox;
     }

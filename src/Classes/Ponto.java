@@ -56,5 +56,32 @@ public class Ponto{
 	 g.setColor(cor);
 	 g.drawLine(getX(),getY(),getX(),getY());
     }
+    
+    public String transformaString(int valor, int quantasPosicoes)	  { 
+    String cadeia = new String(valor+"");				
+    while (cadeia.length() < quantasPosicoes) 
+        cadeia = "0"+cadeia; 
+    return cadeia.substring(0,quantasPosicoes); // corta, se necessário, para
+ // tamanho máximo 
+  }
+    
+    public String transformaString(String valor, int quantasPosicoes)		
+  { 
+    String cadeia = new String(valor+"");				
+    while (cadeia.length() < quantasPosicoes) 
+       cadeia = cadeia+" "; 
+    return cadeia.substring(0,quantasPosicoes); // corta, se necessário, para
+ // tamanho máximo 
+  }
+    
+    public String toString()
+  {
+  	return	transformaString("p",5)+
+			transformaString(getX(),5)+
+			transformaString(getY(),5)+
+  			transformaString(getCor().getRed(),5)+
+  			transformaString(getCor().getGreen(),5)+
+  			transformaString(getCor().getBlue(),5);
+  }
 }
 

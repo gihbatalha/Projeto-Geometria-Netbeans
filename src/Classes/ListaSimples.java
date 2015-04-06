@@ -8,19 +8,11 @@ package Classes;
 /**
  *
  * @author giovanna
- */
+ 
+*/
+import Classes.NoLista;
+
 public class ListaSimples {
-
-    public static class NoLista extends Classes.NoLista {
-
-        public NoLista(Linha linha,
-                       NoLista prox)
-        {
-            super(linha, prox);
-        }
-        
-
-    }
     
     private NoLista primeiro;
     private NoLista ultimo;
